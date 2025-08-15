@@ -41,11 +41,14 @@ export const GallerySubsection = (): JSX.Element => {
       description: "Captured with natural lighting.\nProfessional lens",
     },
     {
-      src: "/images/IMG_1668.JPG",
-      alt: "Creative Composition",
+      src: "/images/quality_restoration_20250205123750520.jpg",
+      alt: "Quality Restoration Work",
       width: "w-[448px]",
-      height: "h-60",
-      hasOverlay: false,
+      height: "h-80",
+      hasOverlay: true,
+      overlayPosition: "top-[260px] left-0",
+      title: "Digital Restoration",
+      description: "High-quality image restoration.\nProfessional retouching",
     },
     {
       src: "/images/LTQ_0431.jpg",
@@ -84,12 +87,12 @@ export const GallerySubsection = (): JSX.Element => {
       width: "w-[448px]",
       height: "h-80",
       hasOverlay: false,
-    },
+    }
   ];
 
   return (
     <section className="flex flex-col items-center gap-10 px-8 py-[120px] w-full">
-      <h2 className="w-fit whitespace-nowrap relative mt-[-1.00px] font-heading-2 font-[number:var(--heading-2-font-weight)] text-black text-[length:var(--heading-2-font-size)] tracking-[var(--heading-2-letter-spacing)] leading-[var(--heading-2-line-height)] [font-style:var(--heading-2-font-style)]">
+      <h2 className="text-4xl font-light text-black tracking-wide italic font-serif mb-4">
         Some of my latest shots
       </h2>
 
@@ -109,10 +112,10 @@ export const GallerySubsection = (): JSX.Element => {
                 <div
                   className={`inline-flex flex-col items-start gap-2 p-6 absolute ${galleryImages[0].overlayPosition} bg-black`}
                 >
-                  <h3 className="w-fit font-heading-3 font-[number:var(--heading-3-font-weight)] text-smoke-white text-[length:var(--heading-3-font-size)] tracking-[var(--heading-3-letter-spacing)] leading-[var(--heading-3-line-height)] whitespace-nowrap relative mt-[-1.00px] [font-style:var(--heading-3-font-style)]">
+                  <h3 className="text-lg font-medium text-white mb-1 font-sans tracking-wide">
                     {galleryImages[0].title}
                   </h3>
-                  <p className="relative w-fit font-caption font-[number:var(--caption-font-weight)] text-smoke-white text-[length:var(--caption-font-size)] tracking-[var(--caption-letter-spacing)] leading-[var(--caption-line-height)] [font-style:var(--caption-font-style)]">
+                  <p className="text-sm font-light text-gray-200 leading-relaxed font-sans">
                     {galleryImages[0].description
                       ?.split("\n")
                       .map((line, index) => (
@@ -164,10 +167,10 @@ export const GallerySubsection = (): JSX.Element => {
                 <div
                   className={`inline-flex flex-col items-start gap-2 p-6 absolute ${galleryImages[3].overlayPosition} bg-black`}
                 >
-                  <h3 className="w-fit font-heading-3 font-[number:var(--heading-3-font-weight)] text-smoke-white text-[length:var(--heading-3-font-size)] tracking-[var(--heading-3-letter-spacing)] leading-[var(--heading-3-line-height)] whitespace-nowrap relative mt-[-1.00px] [font-style:var(--heading-3-font-style)]">
+                  <h3 className="text-lg font-medium text-white mb-1 font-sans tracking-wide">
                     {galleryImages[3].title}
                   </h3>
-                  <p className="relative w-fit font-caption font-[number:var(--caption-font-weight)] text-smoke-white text-[length:var(--caption-font-size)] tracking-[var(--caption-letter-spacing)] leading-[var(--caption-line-height)] [font-style:var(--caption-font-style)]">
+                  <p className="text-sm font-light text-gray-200 leading-relaxed font-sans">
                     {galleryImages[3].description
                       ?.split("\n")
                       .map((line, index) => (
@@ -209,10 +212,10 @@ export const GallerySubsection = (): JSX.Element => {
                 <div
                   className={`inline-flex flex-col items-start gap-2 p-6 absolute ${galleryImages[5].overlayPosition} bg-black`}
                 >
-                  <h3 className="w-fit font-heading-3 font-[number:var(--heading-3-font-weight)] text-smoke-white text-[length:var(--heading-3-font-size)] tracking-[var(--heading-3-letter-spacing)] leading-[var(--heading-3-line-height)] whitespace-nowrap relative mt-[-1.00px] [font-style:var(--heading-3-font-style)]">
+                  <h3 className="text-lg font-medium text-white mb-1 font-sans tracking-wide">
                     {galleryImages[5].title}
                   </h3>
-                  <p className="relative w-fit font-caption font-[number:var(--caption-font-weight)] text-smoke-white text-[length:var(--caption-font-size)] tracking-[var(--caption-letter-spacing)] leading-[var(--caption-line-height)] [font-style:var(--caption-font-style)]">
+                  <p className="text-sm font-light text-gray-200 leading-relaxed font-sans">
                     {galleryImages[5].description
                       ?.split("\n")
                       .map((line, index) => (
@@ -275,7 +278,7 @@ export const GallerySubsection = (): JSX.Element => {
           href="https://drive.google.com/drive/folders/1bh2e6ucOx8ZHe4GIvw0DUERwGMVnvZuk"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 px-4 py-2 bg-black text-white font-medium text-sm hover:bg-gray-800 transition-colors duration-300 rounded-lg"
+          className="inline-flex items-center gap-2 px-6 py-3 bg-black text-white font-light text-base hover:bg-gray-800 transition-all duration-300 rounded-none border-none font-sans tracking-wider"
         >
           <span>See More Photos</span>
           <svg 

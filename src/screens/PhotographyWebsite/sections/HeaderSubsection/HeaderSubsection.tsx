@@ -13,7 +13,7 @@ export const HeaderSubsection = (): JSX.Element => {
   return (
     <header className="flex flex-col items-center gap-[72px] pt-[120px] pb-0 px-8 w-full bg-white">
       <div className="flex flex-col h-60 items-center justify-between relative">
-        <div className="w-fit z-[3] font-heading-1 font-[number:var(--heading-1-font-weight)] text-black text-[length:var(--heading-1-font-size)] text-center tracking-[var(--heading-1-letter-spacing)] leading-[var(--heading-1-line-height)] relative mt-[-1.00px] [font-style:var(--heading-1-font-style)]">
+        <div className="w-fit z-[3] text-6xl font-light text-black text-center tracking-wide leading-tight relative mt-[-1.00px] font-serif italic">
           Urban stories
           <br />
           through the lens
@@ -25,11 +25,11 @@ export const HeaderSubsection = (): JSX.Element => {
           src="/icons/Header Underline.png"
         />
 
-        <div className="w-fit z-[1] whitespace-nowrap relative font-paragraph font-[number:var(--paragraph-font-weight)] text-black text-[length:var(--paragraph-font-size)] tracking-[var(--paragraph-letter-spacing)] leading-[var(--paragraph-line-height)] [font-style:var(--paragraph-font-style)]">
+        <div className="w-fit z-[1] whitespace-nowrap relative text-xl font-light text-black tracking-wide leading-relaxed font-sans">
           Capturing the unseen rhythms of the city.
         </div>
 
-        <Button className="z-0 bg-yellow hover:bg-yellow/90 text-black h-auto px-6 py-3 rounded-[48px] font-link-text font-[number:var(--link-text-font-weight)] text-[length:var(--link-text-font-size)] tracking-[var(--link-text-letter-spacing)] leading-[var(--link-text-line-height)] [font-style:var(--link-text-font-style)]">
+        <Button className="z-0 bg-yellow hover:bg-yellow/90 text-black h-auto px-8 py-4 rounded-full font-light text-base tracking-wider font-sans transition-all duration-300">
           Discover my Journey
         </Button>
       </div>

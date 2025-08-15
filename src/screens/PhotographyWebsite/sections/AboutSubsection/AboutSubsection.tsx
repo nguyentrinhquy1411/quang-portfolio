@@ -41,11 +41,11 @@ export const AboutSubsection = (): JSX.Element => {
     <section className="flex items-center justify-center gap-[132px] px-[148px] py-[120px] w-full bg-white">
       <div className="flex flex-col items-start gap-[33px] flex-[0_0_auto]">
         <div className="flex flex-col items-start gap-4 flex-[0_0_auto]">
-          <h2 className="w-[448px] mt-[-1.00px] font-heading-2 font-[number:var(--heading-2-font-weight)] text-black text-[length:var(--heading-2-font-size)] tracking-[var(--heading-2-letter-spacing)] leading-[var(--heading-2-line-height)] [font-style:var(--heading-2-font-style)]">
+          <h2 className="w-[448px] mt-[-1.00px] text-4xl font-light text-black tracking-wide leading-tight font-serif">
             Hello! I&#39;m Oliver Bennett
           </h2>
 
-          <p className="w-[448px] font-paragraph font-[number:var(--paragraph-font-weight)] text-black text-[length:var(--paragraph-font-size)] tracking-[var(--paragraph-letter-spacing)] leading-[var(--paragraph-line-height)] [font-style:var(--paragraph-font-style)]">
+          <p className="w-[448px] text-lg font-light text-black tracking-wide leading-relaxed font-sans">
             A connoisseur of cityscapes and a storyteller through the lens,
             based in the vibrant heart of London. <br />
             <br />
@@ -67,13 +67,13 @@ export const AboutSubsection = (): JSX.Element => {
               className="border-t border-[#d6d7dd] border-b-0"
             >
               <AccordionTrigger className="flex justify-between px-0 py-4 hover:no-underline [&[data-state=open]>svg]:rotate-180">
-                <span className="mt-[-1.00px] [font-family:'Montserrat',Helvetica] font-semibold text-black text-base tracking-[-0.48px] leading-4 whitespace-nowrap">
+                <span className="mt-[-1.00px] font-sans font-medium text-black text-base tracking-wide leading-4 whitespace-nowrap">
                   {item.title}
                 </span>
               </AccordionTrigger>
               {item.content && (
                 <AccordionContent className="pb-4 pt-0">
-                  <p className="font-small-paragraph font-[number:var(--small-paragraph-font-weight)] text-black text-[length:var(--small-paragraph-font-size)] tracking-[var(--small-paragraph-letter-spacing)] leading-[var(--small-paragraph-line-height)] [font-style:var(--small-paragraph-font-style)]">
+                  <p className="text-base font-light text-black tracking-wide leading-relaxed font-sans">
                     {item.content}
                   </p>
                 </AccordionContent>

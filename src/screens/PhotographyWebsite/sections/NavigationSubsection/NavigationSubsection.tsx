@@ -1,12 +1,26 @@
 import { useGallery } from "../../../../components/GalleryProvider";
-import { Button } from "../../../../components/ui/button";
 
 export const NavigationSubsection = (): JSX.Element => {
   const { openPreview } = useGallery();
+  
+  const scrollToSection = (sectionId: string) => {
+    if (sectionId === 'home') {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else {
+      const element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView({ 
+          behavior: 'smooth',
+          block: 'start'
+        });
+      }
+    }
+  };
+
   const navigationLinks = [
-    { label: "About" },
-    { label: "Portfolio" },
-    { label: "Testimonials" },
+    { label: "Home", sectionId: "home" },
+    { label: "Portfolio", sectionId: "gallery" },
+    { label: "Contact", sectionId: "contact" },
   ];
 
   const socialMediaLinks = [
@@ -31,23 +45,24 @@ export const NavigationSubsection = (): JSX.Element => {
   ];
 
   return (
-    <nav className="flex w-full items-center justify-between px-8 py-4 bg-white border-b border-grey">
+    <nav className="relative flex w-full items-center justify-between px-8 py-4 bg-white border-b border-grey">
       <div className="flex items-center gap-10">
         {navigationLinks.map((link, index) => (
-          <a
+          <button
             key={index}
-            href="#"
-            className="font-link-text font-[number:var(--link-text-font-weight)] text-black text-[length:var(--link-text-font-size)] text-center tracking-[var(--link-text-letter-spacing)] leading-[var(--link-text-line-height)] [font-style:var(--link-text-font-style)] hover:opacity-70 transition-opacity"
+            onClick={() => scrollToSection(link.sectionId)}
+            className="text-base font-light text-black hover:opacity-70 transition-opacity tracking-wide font-sans cursor-pointer bg-transparent border-none"
           >
             {link.label}
-          </a>
+          </button>
         ))}
       </div>
 
-      <div className="flex flex-col items-center">
-        <div className="flex flex-col items-center font-link-text font-[number:var(--link-text-font-weight)] text-black text-[length:var(--link-text-font-size)] text-center tracking-[var(--link-text-letter-spacing)] leading-[var(--link-text-line-height)] [font-style:var(--link-text-font-style)]">
-          <h2 className="font-semibold">Quang</h2>
-          <p className="text-sm opacity-80">Freelance Photographer</p>
+      {/* Absolutely centered section */}
+      <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center">
+        <div className="flex flex-col items-center text-black text-center">
+          <h2 className="text-lg font-medium tracking-wide font-serif">Quang</h2>
+          <p className="text-sm font-light opacity-80 font-sans">Freelance Photographer</p>
         </div>
       </div>
 
@@ -66,10 +81,6 @@ export const NavigationSubsection = (): JSX.Element => {
             </a>
           ))}
         </div>
-
-        <Button className="bg-black text-white hover:bg-black/90 px-6 py-3 rounded-[48px] h-auto font-link-text font-[number:var(--link-text-font-weight)] text-[length:var(--link-text-font-size)] tracking-[var(--link-text-letter-spacing)] leading-[var(--link-text-line-height)] [font-style:var(--link-text-font-style)]">
-          Let&apos;s Talk
-        </Button>
       </div>
     </nav>
   );

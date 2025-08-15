@@ -179,13 +179,7 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
             />
           ) : (
             <div className="flex flex-col items-center justify-center text-gray-400">
-              {isCompressing ? (
-                <>
-                  <div className="w-8 h-8 border-2 border-gray-300 border-t-blue-500 rounded-full animate-spin mb-2"></div>
-                </>
-              ) : (
-                <div className="text-sm">Loading...</div>
-              )}
+              <div className="w-8 h-8 border-2 border-gray-300 border-t-blue-500 rounded-full animate-spin"></div>
             </div>
           )}
         </div>

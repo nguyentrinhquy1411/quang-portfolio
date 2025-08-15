@@ -13,9 +13,12 @@ export const PhotographyWebsite = (): JSX.Element => {
         <div className="w-full mx-auto">
           <NavigationSubsection />
           <HeaderSubsection />
-          <AboutSubsection />
-          <GallerySubsection />
-          <ContactSubsection />
+          <div id="gallery">
+            <GallerySubsection />
+          </div>
+          <div id="contact">
+            <ContactSubsection />
+          </div>
           <FooterSubsection />
         </div>
       </div>

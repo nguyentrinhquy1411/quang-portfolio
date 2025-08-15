@@ -33,10 +33,10 @@ export const ContactSubsection = (): JSX.Element => {
       {/* Background image with overlay */}
       <div className="absolute inset-0 z-0">
         <img
-          className="w-full h-full object-cover opacity-20 cursor-pointer hover:opacity-30 transition-opacity"
+          className="w-full h-full object-cover opacity-20 hover:opacity-30 transition-opacity"
           alt="Contact background"
           src="/images/expansion_20250810123329927.jpg"
-          onClick={() => handleImageClick("/images/expansion_20250810123329927.jpg")}
+          
         />
       </div>
       
@@ -45,7 +45,7 @@ export const ContactSubsection = (): JSX.Element => {
           className="w-20 h-20 rounded-full object-cover border-2 border-yellow cursor-pointer hover:opacity-80 transition-opacity"
           alt="Contact profile"
           src="/images/LTQ_0478.jpg"
-          onClick={() => handleImageClick("/images/LTQ_0478.jpg")}
+          
         />
 
         <h2 className="w-[448px] font-heading-1 font-[number:var(--heading-1-font-weight)] text-smoke-white text-[length:var(--heading-1-font-size)] tracking-[var(--heading-1-letter-spacing)] leading-[var(--heading-1-line-height)] relative mt-[-1.00px] [font-style:var(--heading-1-font-style)]">
@@ -65,7 +65,7 @@ export const ContactSubsection = (): JSX.Element => {
         </p>
       </div>
 
-      <form className="gap-4 flex flex-col items-start relative flex-[0_0_auto] z-10">
+      <form className="gap-4 mt-5 flex flex-col items-start relative flex-[0_0_auto] z-10">
         {formFields.map((field, index) => (
           <div
             key={index}
